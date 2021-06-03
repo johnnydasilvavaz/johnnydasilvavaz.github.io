@@ -43,9 +43,12 @@ li
     align-items: center;
 }
 
-.logo
+.header__logo
 {
+    display: flex;
     height: 50px;
+    flex-grow: 1;
+    justify-self: flex-start;
 }
 
 .header__nav
@@ -72,18 +75,18 @@ li
     box-sizing: border-box;
 }
 
-.header__menu li:last-child a
-{
-    color: #0065FC;
-    font-weight: 700;
-}
-
-.header__menu a
+.header__menu__a
 {
     text-decoration: none;
     color: black;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.header__menu__signup
+{
+    font-weight: 700;
+    color: #0065FC;
 }
 
 .header__menu li:hover a
@@ -103,7 +106,7 @@ li
 .slogan__title
 {
     margin: 0;
-    font-size: 1.35em;
+    font-size: 1.4em;
     font-weight: 700;
 }
 
@@ -132,7 +135,7 @@ li
 {
     font-family: Raleway;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 1.1em;
     border-bottom: 1px solid #F2F2F2;
     border-top: 1px solid #F2F2F2;
     border-left: 1px solid #f2f2f2;
@@ -179,7 +182,7 @@ input[type=search]:focus
 {
     font-family: Raleway;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 1.1em;
     padding-left: 15px;
     padding-right: 15px;
     color: white;
@@ -201,6 +204,7 @@ input[type=search]:focus
 .filter
 {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 20px;
 }
@@ -297,7 +301,7 @@ input[type=search]:focus
 
 .heber__h2
 {
-    font-size: 1.35em;
+    font-size: 1.4em;
     font-weight: 700;
     margin-top: 0px;
     padding-bottom: 5px;
@@ -345,10 +349,9 @@ input[type=search]:focus
     object-fit: cover;
 }
 
-.heber__card .card__body
+.heber__card__body
 {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
 }
 
 .more
@@ -386,7 +389,7 @@ input[type=search]:focus
 
 .pop__title__h2
 {
-    font-size: 1.35em;
+    font-size: 1.4em;
     font-weight: 700;
     margin-top: 0px;
     padding-bottom: 5px;
@@ -394,7 +397,7 @@ input[type=search]:focus
 
 .pop__chart
 {
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .pop__items
@@ -440,12 +443,23 @@ input[type=search]:focus
     object-fit: cover;
 }
 
+.pop__card__body
+{
+    padding: 10px 20px;
+}
+
 #activites
 {
     display: flex;
     flex-direction: column;
     padding-left: 50px;
     padding-right: 50px;
+}
+
+.act__title
+{
+    font-size: 1.4em;
+    font-weight: 700;
 }
 
 .act__card
@@ -501,7 +515,7 @@ input[type=search]:focus
 {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-basis: 100%;
     flex-grow: 1;
 }
@@ -516,11 +530,13 @@ input[type=search]:focus
 .card__desc
 {
     font-size: 0.9em;
+    padding: 10px 0px;
 }
 
 .card__star
 {
     display: flex;
+    flex-grow: 1;
     align-items: flex-end;
     font-size: 0.8em;
 }
@@ -560,12 +576,6 @@ input[type=search]:focus
 .star-unselected
 {
     color: rgb(217,217,217);
-}
-
-.section-title
-{
-    font-size: 1.35em;
-    font-weight: 700;
 }
 
 .footer{
@@ -609,17 +619,27 @@ input[type=search]:focus
     gap: 10px;
 }
 
+.footer__content__item-a
+{
+    width: max-content;
+    padding: 2px 0px;
+}
+
 .footer__content__title
 {
     font-size: 1.1em;
     font-weight: 700;
     margin: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .overlay
 {
     display: flex;
     position: absolute;
+    align-items: center;
+    padding-left: 20px;
     background-color: white;
     width: 100%;
     height: 55px;
