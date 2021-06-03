@@ -60,7 +60,6 @@ li
 .header__menu
 {
     display: flex;
-    flex-basis: 30%;
     justify-content: right;
     list-style: none;
     height: 100%;
@@ -207,6 +206,12 @@ input[type=search]:focus
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.filter__items
+{
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .filter__icon
@@ -649,4 +654,148 @@ input[type=search]:focus
 .bold
 {
     font-weight: bold;
+}
+
+
+@media (max-width: 575.98px) 
+{
+    .hidden-mobile
+    {
+        display: none;
+    }
+
+    .show-mobile
+    {
+        display: block;
+    }
+
+    header
+    {
+        flex-wrap: wrap;
+        padding: 0px;
+    }
+
+    .header__menu
+    {
+        padding: 0px;
+        flex-basis: 100%;
+    }
+
+    .header__menu li
+    {
+        flex-grow: 1;
+        flex-basis: 50%;
+    }
+
+    .header__nav
+    {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .slogan__section
+    {
+        padding: 0px;
+    }
+
+    .search__section
+    {
+        padding: 0px;
+    }
+
+    #hebergements
+    {
+        flex-wrap: wrap;
+        padding: 0px;
+    }
+
+    .heber
+    {
+        flex-basis: 100%;
+        padding: 20px;
+        border-radius: 0px;
+        background-color: white;
+    }
+
+    .pop
+    {
+        flex-basis: 100%;
+        padding: 20px;
+        border-radius: 0px;
+        order: -1;
+    }
+
+    .act__items
+    {
+        flex-wrap: wrap;
+    }
+
+    .footer__content
+    {
+        flex-direction: column;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) 
+{
+    .hidden-mobile
+    {
+        display: none;
+    }
+
+    .show-mobile
+    {
+        display: block;
+    }
+
+    header
+    {
+        flex-wrap: wrap;
+    }
+
+    #hebergements
+    {
+        flex-wrap: wrap;
+    }
+
+    #activites
+    {
+        flex-wrap: wrap;
+    }
+
+    .footer__content
+    {
+        flex-wrap: wrap;
+    }
+}
+
+/*Medium devices (tablets, less than 992px)*/
+@media (max-width: 991.98px) 
+{
+    header
+    {
+        flex-wrap: wrap;
+    }
+
+    #hebergements
+    {
+        flex-wrap: wrap;
+    }
+
+    #activites
+    {
+        flex-wrap: wrap;
+    }
+
+    .footer__content
+    {
+        flex-wrap: wrap;
+    }
+}
+
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1199.98px) 
+{
+
 }
