@@ -69,6 +69,7 @@ li {
     color: #0065FC;
     border-top: 3px solid #0065FC;
     border-bottom: 3px solid white;
+    box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -136,9 +137,7 @@ li {
 }
 
 .search input.search__input:hover {
-    border: 1px solid #0065FC;
-    border-right: 0px;
-    box-sizing: border-box;
+    background-color: #DEEBFF;
 }
 
 .search input.search__input:focus {
@@ -149,6 +148,8 @@ li {
 
 input[type=search]:focus {
     border: 0px solid;
+    border-style: inset;
+    background-color: #DEEBFF;
 }
 
 .search__logo {
@@ -606,7 +607,8 @@ input[type=search]:focus {
     display: none;
 }
 
-@media screen and (max-width: 575.98px) {
+/*Large devices (desktops, less than 1200px)*/
+@media (max-width: 1421.98px) {
     .hidden-mobile {
         display: none;
     }
@@ -620,42 +622,16 @@ input[type=search]:focus {
     }
 
     header {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         padding: 0px;
-        height: auto;
     }
 
     .header__logo {
         padding: 30px 20px;
     }
 
-    .header__menu {
-        padding: 0px;
-        flex-basis: 100%;
-    }
-
-    .header__menu li {
-        flex-basis: 50%;
-        justify-content: center;
-        align-content: center;
-        border-bottom: 3px solid #f2f2f2;
-        border-top: 3px solid white;
-        padding: 0;
-        padding-bottom: 15px;
-    }
-
-    .header__menu li:hover {
-        border-bottom: 3px solid #0065FC;
-        border-top: 3px solid white;
-        box-sizing: border-box;
-    }
-
-    .header__nav {
-        order: 1;
-        flex-basis: 100%;
-    }
-
     .content {
+        max-width: 100%;
         margin-left: 0px;
         margin-right: 0px;
     }
@@ -678,7 +654,6 @@ input[type=search]:focus {
     .search {
         margin: 20px 0px;
         font-size: 0.9em;
-        max-width: 100%;
     }
 
     .search__input {
@@ -726,6 +701,194 @@ input[type=search]:focus {
     }
 
     .heber {
+        max-width: 100%;
+        padding: 0px 20px;
+        padding-top: 30px;
+        padding-bottom: 0px;
+        border-radius: 0px;
+        background-color: white;
+    }
+
+    .heber__items {
+        padding: 0px;
+        gap: 30px;
+    }
+
+    .heber__card__img {
+        max-width: 100%;
+    }
+
+    .pop {
+        max-width: 100%;
+        padding: 40px 20px;
+        border-radius: 0px;
+        width: 100%;
+        order: -1;
+    }
+
+    .pop__items {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .pop__card {
+        max-width: 40%;
+        flex: 1;
+    }
+
+    #activites {
+        padding: 0px 20px;
+    }
+
+    .act__items {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .act__col {
+        max-width: 22%;
+        gap: 20px;
+    }
+
+    .act__card__img {
+        max-width: 100%;
+    }
+
+    .card__desc {
+        padding: 5px 0px;
+    }
+
+    .footer {
+        padding: 30px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .hidden-mobile {
+        display: none;
+    }
+
+    .show-mobile {
+        display: block;
+    }
+
+    html{
+        font-size: 17px;
+    }
+
+    header {
+        flex-wrap: wrap;
+        padding: 0px;
+        height: auto;
+    }
+
+    .header__logo {
+        padding: 25px 20px;
+    }
+
+    .header__menu {
+        padding: 0px;
+        flex-basis: 100%;
+    }
+
+    .header__menu li {
+        flex-basis: 50%;
+        justify-content: center;
+        align-content: center;
+        border-bottom: 3px solid #f2f2f2;
+        border-top: 3px solid white;
+        padding: 0;
+        padding-bottom: 15px;
+    }
+
+    .header__menu li:hover {
+        border-bottom: 3px solid #0065FC;
+        border-top: 3px solid white;
+        box-sizing: border-box;
+    }
+
+    .header__nav {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .content {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .slogan__section {
+        padding: 0px 20px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .slogan__subtitle {
+        margin-top: 15px;
+        font-size: 1em;
+    }
+
+    .search__section {
+        padding: 0px;
+    }
+
+    .search {
+        margin: 15px 0px;
+        font-size: 0.9em;
+        max-width: 100%;
+    }
+
+    .search__input {
+        width: 100%;
+        padding: 0px 20px;
+    }
+
+    .search__btn {
+        padding: 0px;
+        border-radius: 15px;
+        min-width: 50px;
+    }
+
+    .filter {
+        font-size: 0.9em;
+        margin-bottom: 15px;
+    }
+
+    .filter__items {
+        row-gap: 10px;
+        column-gap: 10px;
+        font-size: 0.9em;
+    }
+
+    .filter__title {
+        margin-left: 0px;
+    }
+
+    .results {
+        align-items: flex-start;
+        margin-top: 20px; 
+        margin-bottom: 10px;
+    }
+
+    .results__info {
+        margin: 0px;
+        min-height: 20px;
+        min-width: 20px;
+        font-size: 0.6em;
+    }
+
+    .results__text {
+        font-size: 0.9em;
+    }
+
+    #hebergements {
+        flex-wrap: wrap;
+        padding: 0px;
+        width: 100%;
+    }
+
+    .heber {
         flex-basis: 100%;
         padding: 0px 20px;
         padding-top: 30px;
@@ -753,6 +916,10 @@ input[type=search]:focus {
         border-radius: 0px;
         width: 100%;
         order: -1;
+    }
+
+    .pop__items {
+        flex-direction: column;
     }
 
     .pop__card {
@@ -796,7 +963,6 @@ input[type=search]:focus {
 
     .footer {
         padding: 30px;
-        width: 100%;
     }
 
     .footer__content {
@@ -806,7 +972,7 @@ input[type=search]:focus {
 }
 
 /* Small devices (landscape phones, less than 768px)*/
-@media (max-width: 767.98px) {
+/*@media (max-width: 767.98px) {
     .hidden-mobile {
         display: none;
     }
@@ -830,10 +996,10 @@ input[type=search]:focus {
     .footer__content {
         flex-wrap: wrap;
     }
-}
+}*/
 
 /*Medium devices (tablets, less than 992px)*/
-@media (max-width: 991.98px) {
+/*@media (max-width: 991.98px) {
     header {
         flex-wrap: wrap;
     }
@@ -849,9 +1015,5 @@ input[type=search]:focus {
     .footer__content {
         flex-wrap: wrap;
     }
-}
+}*/
 
-/*Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) {
-
-}
