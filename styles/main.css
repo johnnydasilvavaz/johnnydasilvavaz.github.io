@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
@@ -68,7 +69,6 @@ li {
     color: #0065FC;
     border-top: 3px solid #0065FC;
     border-bottom: 3px solid white;
-    box-sizing: border-box;
     cursor: pointer;
 }
 
@@ -97,7 +97,7 @@ li {
 
 .slogan__title {
     margin: 0;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
@@ -117,35 +117,34 @@ li {
     display: flex;
     height: 50px;
     margin-bottom: 30px;
+    border-bottom: 1px solid #F2F2F2;
+    border-top: 1px solid #F2F2F2;
+    box-sizing: border-box;
+    border-radius: 15px;
+    max-width: max-content;
 }
 
 .search__input {
     font-family: Raleway;
     font-weight: bold;
     font-size: 1.1em;
-    border-bottom: 1px solid #F2F2F2;
-    border-top: 1px solid #F2F2F2;
-    border-left: 1px solid #f2f2f2;
-    border-right: 0px;
+    border: 0px;
     border-radius: 0px;
-    width: 235px;
+    min-width: 235px;
     padding-right: 10px;
     padding-left: 10px;
-    transition: box-shadow 0.2s ease;
 }
 
-.search input.search__input:hover, .search input.search__input:focus {
-    box-shadow: inset 0px 0px 5px rgba(150,150,150,0.2);
-    border-bottom: 1px solid #0065FC;
-    border-top: 1px solid #0065FC;
-    border-left: 1px solid #0065FC;
-    transition: box-shadow 0.2s ease;
+.search input.search__input:hover {
+    border: 1px solid #0065FC;
+    border-right: 0px;
+    box-sizing: border-box;
 }
 
 .search input.search__input:focus {
-    border: 2px solid #0065FC;
+    border: 0px solid #0065FC;
+    border-right: 0px;
     box-sizing: border-box;
-    outline: none;
 }
 
 input[type=search]:focus {
@@ -192,6 +191,7 @@ input[type=search]:focus {
 .filter__items {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 30px;
 }
 
 .filter__icon {
@@ -200,11 +200,18 @@ input[type=search]:focus {
     font-size: 1.2em;
     background-color: #DEEBFF;
     border-radius: 999px;
-    height: 50px;
-    width: 50px;
+    min-height: 50px;
+    min-width: 50px;
     justify-content: center;
     align-items: center;
     margin-left: -2px;
+}
+
+.filter__title{
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-right: 20px;
+    margin-left: 10px;
 }
 
 .filter__text {
@@ -222,8 +229,6 @@ input[type=search]:focus {
     box-sizing: border-box;
     height: 50px;
     border-radius: 999px;
-    margin-left: 10px;
-    margin-right: 20px;
     transition: all 0.2s ease;
 }
 
@@ -252,9 +257,8 @@ input[type=search]:focus {
     border-radius: 999px;
     color: #0065FC;
     font-size: 0.8em;
-    height: 20px;
-    width: 20px;
-    margin-right: 10px;
+    min-height: 20px;
+    min-width: 20px;
     margin-left: 10px;
 }
 
@@ -398,10 +402,8 @@ input[type=search]:focus {
 }
 
 .pop__card__img {
-    display: flex;
-    align-self: stretch;
     max-width: 128px;
-    max-height: 135px;
+    min-height: 135px;
 }
 
 .pop__img {
@@ -613,6 +615,10 @@ input[type=search]:focus {
         display: block;
     }
 
+    html{
+        font-size: 19px;
+    }
+
     header {
         flex-wrap: wrap;
         padding: 0px;
@@ -620,7 +626,7 @@ input[type=search]:focus {
     }
 
     .header__logo {
-        padding: 20px;
+        padding: 30px 20px;
     }
 
     .header__menu {
@@ -634,18 +640,14 @@ input[type=search]:focus {
         align-content: center;
         border-bottom: 3px solid #f2f2f2;
         border-top: 3px solid white;
-        padding-bottom: 10px;
+        padding: 0;
+        padding-bottom: 15px;
     }
 
     .header__menu li:hover {
         border-bottom: 3px solid #0065FC;
         border-top: 3px solid white;
         box-sizing: border-box;
-    }
-
-    .header__menu__a {
-        width: 100%;
-        height: 100%;
     }
 
     .header__nav {
@@ -661,6 +663,12 @@ input[type=search]:focus {
     .slogan__section {
         padding: 0px 20px;
         padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .slogan__subtitle {
+        margin-top: 15px;
+        font-size: 0.9em;
     }
 
     .search__section {
@@ -668,12 +676,14 @@ input[type=search]:focus {
     }
 
     .search {
-        padding: 0px 20px;
-        margin-bottom: 10px;
+        margin: 20px 0px;
+        font-size: 0.9em;
+        max-width: 100%;
     }
 
     .search__input {
         width: 100%;
+        padding: 0px 20px;
     }
 
     .search__btn {
@@ -683,22 +693,30 @@ input[type=search]:focus {
     }
 
     .filter {
-        padding: 0px 10px;
+        font-size: 0.9em;
     }
 
     .filter__items {
         row-gap: 10px;
+        column-gap: 10px;
+        font-size: 0.9em;
+    }
+
+    .filter__title {
+        margin-left: 0px;
     }
 
     .results {
-        padding: 0px 20px;
         align-items: flex-start;
+        margin-top: 20px; 
+        margin-bottom: 10px;
     }
 
     .results__info {
         margin: 0px;
         min-height: 20px;
         min-width: 20px;
+        font-size: 0.6em;
     }
 
     #hebergements {
@@ -731,7 +749,7 @@ input[type=search]:focus {
 
     .pop {
         max-width: 100%;
-        padding: 30px 20px;
+        padding: 40px 20px;
         border-radius: 0px;
         width: 100%;
         order: -1;
@@ -740,15 +758,6 @@ input[type=search]:focus {
     .pop__card {
         max-width: 100%;
         flex: 1;
-    }
-
-    .pop__card__img {
-        flex-direction: column;
-    }
-
-    .pop__img {
-        height: 100%;
-        width: auto;
     }
 
     #activites {
@@ -779,6 +788,10 @@ input[type=search]:focus {
 
     .img-v-3 {
         max-height: 190px;
+    }
+
+    .card__desc {
+        padding: 5px 0px;
     }
 
     .footer {
