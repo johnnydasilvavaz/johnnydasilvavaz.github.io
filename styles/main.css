@@ -68,25 +68,20 @@ header {
     cursor: pointer;
 }
 
-.header__menu__a {
-    text-decoration: none;
-    color: black;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
 .header__menu__signup {
     text-decoration: none;
     font-weight: 700;
     color: #0065FC;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 0px 30px;
+}
+
+.header__menu__signup:hover {
+    text-decoration: underline;
 }
 
 .slogan__section {
     display: flex;
     flex-direction: column;
-    margin: 0;
 }
 
 .slogan__title {
@@ -98,13 +93,6 @@ header {
 .slogan__subtitle {
     margin-top: 10px;
     margin-bottom: 20px;
-}
-
-.search__section {
-    display: flex;
-    flex-direction: column;
-    padding-left: 50px;
-    padding-right: 50px;
 }
 
 .search {
@@ -123,7 +111,7 @@ header {
     align-items: center;
     background-color: #F2F2F2;
     min-width: 50px;
-    min-height: 100%;
+    min-height: 50px;
     border-radius: 15px 0px 0px 15px;
 }
 
@@ -168,7 +156,6 @@ header {
     font-weight: 700;
     background-color: #DEEBFF;
     cursor: pointer;
-    transition: all 0.2s ease;
 }
 
 .filter {
@@ -209,6 +196,7 @@ header {
     margin-right: 20px;
     font-weight: 700;
     font-size: 1.1em;
+    transition: all 0.2s ease;
 }
 
 .filter__pill {
@@ -226,17 +214,16 @@ header {
     border: 2px solid #DEEBFF;
     box-shadow: 0px 3px 8px rgba(150,150,150,0.2);
     cursor: pointer;
-    transition: all 0.2s ease;
 }
 
 .filter__pill:hover > .filter__text {
     color: #0065FC;
-    transition: all 0.2s ease;
 }
 
 .results {
     display: flex;
     align-items: center;
+    margin: 20px 0px;
 }
 
 .results__info {
@@ -402,7 +389,7 @@ header {
 }
 
 .pop__card__body {
-    padding: 10px 20px;
+    padding: 3%;
 }
 
 #activites {
@@ -535,10 +522,8 @@ header {
     display: flex;
     justify-content: center;
     background-color: #F2F2F2;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 50px;
     padding-top: 30px;
-    padding-bottom: 50px;
     margin-top: 40px;
 }
 
@@ -606,11 +591,6 @@ header {
         font-size: 16px;
     }
 
-    header {
-        flex-wrap: nowrap;
-        padding: 0px;
-    }
-
     .header__logo {
         padding: 0px 20px;
     }
@@ -621,25 +601,6 @@ header {
     }
 
     .slogan__section {
-        padding: 0px 20px;
-    }
-
-    .slogan__subtitle {
-        margin-top: 15px;
-        font-size: 0.9em;
-    }
-
-    .search__section {
-        padding: 0px;
-    }
-
-    .search {
-        margin: 20px 0px;
-        font-size: 0.9em;
-    }
-
-    .search__input {
-        width: 100%;
         padding: 0px 20px;
     }
 
@@ -659,34 +620,24 @@ header {
 
     .results {
         align-items: flex-start;
-        margin-bottom: 10px;
     }
 
     .results__info {
         margin: 0px;
-        min-height: 20px;
-        min-width: 20px;
         font-size: 0.6em;
     }
 
     #hebergements {
         flex-wrap: wrap;
-        padding: 0px;
         width: 100%;
     }
 
     .heber {
         max-width: 100%;
-        padding: 0px 20px;
-        padding-top: 30px;
+        padding: 30px 20px;
         padding-bottom: 0px;
         border-radius: 0px;
         background-color: white;
-    }
-
-    .heber__items {
-        padding: 0px;
-        gap: 30px;
     }
 
     .heber__card {
@@ -707,21 +658,15 @@ header {
 
     .pop__items {
         flex-direction: row;
-        flex-wrap: wrap;
     }
 
     .pop__card {
         max-width: 35%;
         min-width: 25%;
-        flex: 1;
     }
 
     .pop__card__img {
         max-width: 40%;
-    }
-
-    .pop__card__body {
-        padding: 3%;
     }
 
     #activites {
@@ -795,7 +740,7 @@ header {
         align-content: center;
         border-bottom: 3px solid #f2f2f2;
         border-top: 3px solid white;
-        padding: 0;
+        padding: 0px;
         padding-bottom: 15px;
     }
 
@@ -806,8 +751,7 @@ header {
     }
 
     .slogan__section {
-        padding: 0px 20px;
-        padding-top: 30px;
+        padding: 30px 20px;
         padding-bottom: 20px;
     }
 
@@ -879,7 +823,6 @@ header {
         flex-basis: 100%;
         padding: 0px 20px;
         padding-top: 30px;
-        padding-bottom: 0px;
         border-radius: 0px;
         background-color: white;
     }
