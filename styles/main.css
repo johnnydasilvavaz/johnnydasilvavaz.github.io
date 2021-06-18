@@ -11,7 +11,6 @@ html {
 
 body {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     font-family: Raleway, sans-serif;;
     margin: 0px;
@@ -36,7 +35,6 @@ header {
     display: flex;
     height: 50px;
     flex-grow: 1;
-    justify-self: flex-start;
 }
 
 .header__nav {
@@ -46,7 +44,6 @@ header {
 
 .header__menu {
     display: flex;
-    justify-content: right;
     list-style: none;
     height: 100%;
     align-items: center;
@@ -122,8 +119,7 @@ header {
     border: 0px;
     border-radius: 0px;
     min-width: 235px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding: 0px 10px;
 }
 
 .search input.search__input:hover {
@@ -141,8 +137,7 @@ header {
     font-family: Raleway;
     font-weight: 600;
     font-size: 1.1em;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0px 15px;
     min-height: 100%;
     color: white;
     background-color: #0065FC;
@@ -422,7 +417,6 @@ header {
 .act__items {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
     gap: 40px;
 }
 
@@ -430,7 +424,6 @@ header {
     display: flex;
     flex-direction: column;
     overflow: visible;
-    align-items: stretch;
     flex-grow: 1;
     gap: 40px;
     max-width: 305px;
@@ -522,8 +515,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: #F2F2F2;
-    padding: 50px;
-    padding-top: 30px;
+    padding: 30px 50px 50px;
     margin-top: 40px;
 }
 
@@ -634,8 +626,7 @@ header {
 
     .heber {
         max-width: 100%;
-        padding: 30px 20px;
-        padding-bottom: 0px;
+        padding: 30px 20px 0px;
         border-radius: 0px;
         background-color: white;
     }
@@ -697,6 +688,14 @@ header {
     }
 }
 
+/*Medium devices (tablets, less than 992px)*/
+/*@media (max-width: 991.98px) {
+}*/
+
+/* Small devices (landscape phones, less than 768px)*/
+/*@media (max-width: 767.98px) {
+}*/
+
 @media screen and (max-width: 575.98px) {
     .hidden-mobile {
         display: none;
@@ -740,8 +739,7 @@ header {
         align-content: center;
         border-bottom: 3px solid #f2f2f2;
         border-top: 3px solid white;
-        padding: 0px;
-        padding-bottom: 15px;
+        padding: 0px 0px 15px;
     }
 
     .header__menu li:hover {
@@ -751,8 +749,7 @@ header {
     }
 
     .slogan__section {
-        padding: 30px 20px;
-        padding-bottom: 20px;
+        padding: 30px 20px 20px;
     }
 
     .slogan__subtitle {
@@ -821,8 +818,7 @@ header {
 
     .heber {
         flex-basis: 100%;
-        padding: 0px 20px;
-        padding-top: 30px;
+        padding: 30px 20px 0px;
         border-radius: 0px;
         background-color: white;
     }
@@ -891,50 +887,3 @@ header {
         gap: 30px;
     }
 }
-
-/* Small devices (landscape phones, less than 768px)*/
-/*@media (max-width: 767.98px) {
-    .hidden-mobile {
-        display: none;
-    }
-
-    .show-mobile {
-        display: block;
-    }
-
-    header {
-        flex-wrap: wrap;
-    }
-
-    #hebergements {
-        flex-wrap: wrap;
-    }
-
-    #activites {
-        flex-wrap: wrap;
-    }
-
-    .footer__content {
-        flex-wrap: wrap;
-    }
-}*/
-
-/*Medium devices (tablets, less than 992px)*/
-/*@media (max-width: 991.98px) {
-    header {
-        flex-wrap: wrap;
-    }
-
-    #hebergements {
-        flex-wrap: wrap;
-    }
-
-    #activites {
-        flex-wrap: wrap;
-    }
-
-    .footer__content {
-        flex-wrap: wrap;
-    }
-}*/
-
