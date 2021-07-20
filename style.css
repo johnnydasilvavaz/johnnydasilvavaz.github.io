@@ -337,6 +337,13 @@ a:hover {
     background: transparent;
 }
 
+a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    min-width: 48px;
+}
+
 .navbar-toggle {
     margin: 10px 10px 0 0;
     border: 0px;
@@ -701,6 +708,7 @@ p {
 
 .social {
     max-width: 400px;
+    justify-content: center;
     margin: auto auto auto auto;
 }
 
@@ -758,6 +766,7 @@ h4 {
 }
 
 .bold-link {
+    justify-content: center;
     font-weight: 900;
     text-decoration: underline!important;
 }
